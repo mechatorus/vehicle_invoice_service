@@ -74,6 +74,15 @@ curl -X POST https://your-ec2-ip/api/invoice/generate \
   }' \
   --output invoice.pdf
 ```
+Actual Curl
+
+```bash
+curl --location 'https://51.21.253.197/api/invoice/generate' \
+--header 'Content-Type: application/json' \
+--data-raw '{"customerName":"Rahul Verma","customerAddress":"456 MG Road, Indore, MP 452001","customerPhone":"7311234569","customerEmail":"rahul@email.com","dealerId":1,"vehicleId":1}'
+```
+
+
 
 ### Health Check
 
@@ -138,3 +147,5 @@ sudo journalctl -u vehicle-invoice-service -f
 # Restart service
 sudo systemctl restart vehicle-invoice-service
 ```
+
+
